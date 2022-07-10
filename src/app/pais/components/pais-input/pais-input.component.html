@@ -4,6 +4,7 @@
     placeholder="Buscar país"
     name="termino"
     [(ngModel)]="termino"
+    (input)="teclaPresionada()"
     autocomplete="off"
     class="form-control"
   />
