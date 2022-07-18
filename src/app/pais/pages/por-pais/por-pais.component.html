@@ -8,6 +8,13 @@
     placeholder="Buscar por país..."
   ></app-pais-input>
 </div>
+<ul class="list-group">
+  <li *ngFor="let pais of paisesSugeridos" class="list-group-item">
+    <a href="" [routerLink]="'pais' + '/' + pais.cca2" class="nav-link">
+      {{ pais.flag }} {{ pais.altSpellings[2] }}
+    </a>
+  </li>
+</ul>
 <hr />
 <div *ngIf="hayError" class="alert alert-danger">
   No se encontró nada con el término {{ termino }}
